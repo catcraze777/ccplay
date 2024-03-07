@@ -1,0 +1,9 @@
+local consts = require("consts")
+
+local main = require("play")
+local skin = main.skin(consts.SKINTYPE_7KEYS, consts.PLAYSTYLE_SP)
+if skin_config then
+	return skin.body()
+else
+	return skin.header
+end
