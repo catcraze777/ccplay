@@ -9,6 +9,7 @@ A Beatoraja Play Skin with Focus on Frame Customization
 * Custom sudden/lift cover support.
 * Turn on and off groove gauge/number.
 * Custom groove gauge colors for easy, assisted easy, and hazard gauge.
+* Custom rainbow groove gauge variant.
 * Minimal progress graph.
 * Extended play information and note graph.
 
