@@ -5,8 +5,10 @@ A Beatoraja Play Skin with Focus on Frame Customization
 * 7-key and 5-key support.
 * RGB frame customization.
 * Overlay images over frame.
+* Webcam frame option.
 * 1P and 2P playsides.
 * Custom sudden/lift cover support.
+* Custom note support.
 * Turn on and off groove gauge/number.
 * Custom groove gauge colors for easy, assisted easy, and hazard gauge.
 * Custom rainbow groove gauge variant.
@@ -18,8 +20,8 @@ CC-Play is primarily designed with easy frame configuration and customization in
 # Examples of Frame Customization
 The following use the RGB customization present in the skin config.
 ![java_06_18-54-49](https://github.com/catcraze777/ccplay/assets/52767118/2062704e-413f-47bc-8a30-75d7fe3cb717)
-![java_06_18-58-12](https://github.com/catcraze777/ccplay/assets/52767118/33043c07-d5bf-4ec4-8794-92bb26d1155e)
 ![java_06_19-06-59](https://github.com/catcraze777/ccplay/assets/52767118/552cb206-a33a-4d1b-9a20-862cc29c0c53)
+![java_10_17-29-00](https://github.com/catcraze777/ccplay/assets/52767118/ca4860d1-e5a9-431a-a2db-316f29996b45)
 
 The following uses an image overlay over the optional flat frame to achieve a more custom look. No code or asset edits were otherwise made.
 ![java_06_19-09-29](https://github.com/catcraze777/ccplay/assets/52767118/9a81e72c-f87f-49d7-828c-3f27580bdff0)
