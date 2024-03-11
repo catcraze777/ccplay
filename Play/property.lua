@@ -20,6 +20,12 @@ table.insert(property.property, {
 	}
 })
 table.insert(property.property, {
+	name = "Toggle Webcam Frame", category = "Toggle Webcam Frame", item = {
+		{name = "Off", op = 2281},
+		{name = "On", op = 2282}
+	}
+})
+table.insert(property.property, {
 	name = "Frame Visuals", category = "Frame Visuals", item = {
 		{name = "Shaded", op = 2061},
 		{name = "Flat", op = 2062}
@@ -126,16 +132,23 @@ table.insert(property.filepath, {name = "Custom Frame Overlay", category = "Cust
 table.insert(property.filepath, {name = "Custom Turntable", category = "Custom Turntable", path = "custom/turntable/*.png", def = "Default"})
 table.insert(property.filepath, {name = "Custom Keyflash", category = "Custom Keyflash", path = "custom/keyflash/*.png", def = "Default"})
 table.insert(property.filepath, {name = "Custom Keybeam", category = "Custom Keybeam", path = "custom/keybeam/*.png", def = "Default"})
+table.insert(property.filepath, {name = "Custom Notes", category = "Custom Notes", path = "custom/notes/*", def = "Default"})
 
 property.offset = {}
 table.insert(property.offset, {
 	name = "Frame RGB (0-255)", category = "Frame RGB (0-255)", id = 48, x = 0, y = 0, w = 0
 })
 table.insert(property.offset, {
-	name = "Stipes RGB (0-255)", category = "Stipes RGB (0-255)", id = 48, x = 0, y = 0, w = 0
+	name = "Stipes RGB (0-255)", category = "Stipes RGB (0-255)", id = 49, x = 0, y = 0, w = 0
 })
 table.insert(property.offset, {
-	name = "Judge Text Offset", category = "Judge Text Offset", id = 48, y = 0
+	name = "Judge Text Offset", category = "Judge Text Offset", id = 50, y = 0
+})
+table.insert(property.offset, {
+	name = "Notes Graph Offset", category = "Notes Graph Offset", id = 51, h = 0
+})
+table.insert(property.offset, {
+	name = "Play Information Offset", category = "Play Information Offset", id = 52, x = 0, y = 0
 })
 
 property.category = {
@@ -145,6 +158,8 @@ property.category = {
 		"Toggle Frame Details",
 		"Frame Visuals",
 		"Frame Rainbow",
+		"Toggle Webcam Frame",
+		"Custom Notes",
 		"Custom Turntable",
 		"Custom Keyflash",
 		"Custom Keybeam",
@@ -164,11 +179,14 @@ property.category = {
 		"Sudden Cover",
 		"Custom Lift Cover",
 		"Lift Cover",
+		"Enable Key Cover",
 		"Fast/Slow",
 		"Ghost Score",
 		"Ghost Target",
 		"Play Information",
-		"Notes Graph"
+		"Play Information Offset",
+		"Notes Graph",
+		"Notes Graph Offset"
 	}},
 }
 

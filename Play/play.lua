@@ -17,7 +17,7 @@ function main.skin(skintype, playstyle)
 	
 	local header = {
 		type = skintype,
-		name = "DEMO VERSION: CC-Play Vers 1.0",
+		name = "CC-Play Vers 1.1",
 		w = 1920,
 		h = 1080,
 		loadend = 3500,
@@ -31,6 +31,14 @@ function main.skin(skintype, playstyle)
 		offset = property.offset,
 		category = property.category
 	}
+	
+	if skintype == consts.SKINTYPE_5KEYS then
+		table.insert(header.property, {
+		name = "Enable Key Cover", category = "Enable Key Cover", item = {
+			{name = "On", op = 2171},
+			{name = "Off", op = 2172}
+		}})
+	end
 
 	local function body()
 		property = require("lua/property_funcs")
@@ -43,9 +51,9 @@ function main.skin(skintype, playstyle)
 		skin.source = {}
 		table.insert(skin.source, {id = "src-common", path = "img/common/main.png"})
 		table.insert(skin.source, {id = "src-lane", path = "img/common/lane/lane01.png"})
-		table.insert(skin.source, {id = "src-note", path = "img/common/notes/notes.png"})
-		table.insert(skin.source, {id = "src-lnote", path = "img/common/notes/longnotes.png"})
-		table.insert(skin.source, {id = "src-hcnote", path = "img/common/notes/hellchargenotes.png"})
+		table.insert(skin.source, {id = "src-note", path = "custom/notes/*/notes.png"})
+		table.insert(skin.source, {id = "src-lnote", path = "custom/notes/*/longnotes.png"})
+		table.insert(skin.source, {id = "src-hcnote", path = "custom/notes/*/hellchargenotes.png"})
 		table.insert(skin.source, {id = "src-barline", path = "img/common/barline/Default.png"})
 		table.insert(skin.source, {id = "src-judgeline", path = "img/common/barline/red.png"})
 		if property.customLift() then

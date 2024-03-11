@@ -230,23 +230,34 @@ function BGAFrame.destination()
 			}
 		})
 	end
-	table.insert(t, {id = -101, blend = 2, filter = 1, loop = 1000, stretch = 1, op = {80, 195}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = property.constants.bga_w, h = property.constants.bga_h, a = 0}, {time = 1000, a = 255} }})
-	table.insert(t, {id = -101, blend = 2, filter = 1, timer = 40, loop = -1, stretch = 1, op = {81, 195}, dst = { {x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = property.constants.bga_w, h = property.constants.bga_h}, {time = 500, a = 0} }})
-	table.insert(t, {id = -100, filter = 1, loop = 1000, stretch = 3, op = {80, 191, 194}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = property.constants.bga_w, h = property.constants.bga_h, a = 0}, {time = 1000, a = 255} }})
-	table.insert(t, {id = -100, filter = 1, loop = -1, timer = 40, stretch = 3, op = {81, 191, 194}, dst = { {x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = property.constants.bga_w, h = property.constants.bga_h}, {time = 500, a = 0} }})
-	table.insert(t, {id = -102, filter = 1, loop = 1000, stretch = 1, op = {80, 193, 194, 190}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = property.constants.bga_w, h = property.constants.bga_h, a = 0}, {time = 1000, a = 255} }})
-	table.insert(t, {id = -102, filter = 1, loop = -1, timer = 40, stretch = 1, op = {81, 193, 194, 190}, dst = { {x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = property.constants.bga_w, h = property.constants.bga_h}, {time = 500, a = 0} }})
-	table.insert(t, {id = "notes-graph", loop = 1000, op = {2152}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = 1060, h = 100, a = 0}, {time = 1000, a = 200} }})
-	table.insert(t, {id = "notes-graph", loop = 1000, op = {80, -2152, -2155, -2151}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = 1060, h = 100, a = 0}, {time = 1000, a = 200} }})
-	table.insert(t, {id = "judgegraph-1", loop = 1000, op = {81, 2153}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = 1060, h = 100, a = 0}, {time = 1000, a = 200} }})
-	table.insert(t, {id = "judgegraph-2", loop = 1000, op = {81, 2154}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = 1060, h = 100, a = 0}, {time = 1000, a = 200} }})
-	table.insert(t, {id = "timingvisualizer", loop = 1000, op = {2155}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = 1060, h = 70, a = 0}, {time = 1000, a = 200} }})
-	table.insert(t, {id = "bpmgraph", loop = 1000, op = {177, -2155, -2151}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = 1060, h = 100, a = 0}, {time = 1000, a = 200} }})
+	table.insert(t, {id = -101, blend = 2, filter = 1, loop = 1000, stretch = 1, op = {80, 195, 2281}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = property.constants.bga_w, h = property.constants.bga_h, a = 0}, {time = 1000, a = 255} }})
+	table.insert(t, {id = -101, blend = 2, filter = 1, timer = 40, loop = -1, stretch = 1, op = {81, 195, 2281}, dst = { {x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = property.constants.bga_w, h = property.constants.bga_h}, {time = 500, a = 0} }})
+	table.insert(t, {id = -100, filter = 1, loop = 1000, stretch = 3, op = {80, 191, 194, 2281}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = property.constants.bga_w, h = property.constants.bga_h, a = 0}, {time = 1000, a = 255} }})
+	table.insert(t, {id = -100, filter = 1, loop = -1, timer = 40, stretch = 3, op = {81, 191, 194, 2281}, dst = { {x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = property.constants.bga_w, h = property.constants.bga_h}, {time = 500, a = 0} }})
+	table.insert(t, {id = -102, filter = 1, loop = 1000, stretch = 1, op = {80, 193, 194, 190, 2281}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = property.constants.bga_w, h = property.constants.bga_h, a = 0}, {time = 1000, a = 255} }})
+	table.insert(t, {id = -102, filter = 1, loop = -1, timer = 40, stretch = 1, op = {81, 193, 194, 190, 2281}, dst = { {x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = property.constants.bga_w, h = property.constants.bga_h}, {time = 500, a = 0} }})
 	
-	local playinfo_x = property.constants.bga_x + video_x + 15
-	local playinfo_y = property.constants.bga_y + 15
+	table.insert(t, {id = -101, blend = 2, filter = 1, loop = 1000, stretch = 1, op = {80, 195, 2282}, dst = { {time = 500, x = property.constants.bga_x + video_x + 184, y = property.constants.bga_y + 276, w = 692, h = 514, a = 0}, {time = 1000, a = 255} }})
+	table.insert(t, {id = -101, blend = 2, filter = 1, timer = 40, loop = -1, stretch = 1, op = {81, 195, 2282}, dst = { {x = property.constants.bga_x + video_x + 184, y = property.constants.bga_y + 276, w = 692, h = 514}, {time = 500, a = 0} }})
+	table.insert(t, {id = -100, filter = 1, loop = 1000, stretch = 3, op = {80, 191, 194, 2282}, dst = { {time = 500, x = property.constants.bga_x + video_x + 184, y = property.constants.bga_y + 276, w = 692, h = 514, a = 0}, {time = 1000, a = 255} }})
+	table.insert(t, {id = -100, filter = 1, loop = -1, timer = 40, stretch = 3, op = {81, 191, 194, 2282}, dst = { {x = property.constants.bga_x + video_x + 184, y = property.constants.bga_y + 276, w = 692, h = 514}, {time = 500, a = 0} }})
+	table.insert(t, {id = -102, filter = 1, loop = 1000, stretch = 1, op = {80, 193, 194, 190, 2282}, dst = { {time = 500, x = property.constants.bga_x + video_x + 184, y = property.constants.bga_y + 276, w = 692, h = 514, a = 0}, {time = 1000, a = 255} }})
+	table.insert(t, {id = -102, filter = 1, loop = -1, timer = 40, stretch = 1, op = {81, 193, 194, 190, 2282}, dst = { {x = property.constants.bga_x + video_x + 184, y = property.constants.bga_y + 276, w = 692, h = 514}, {time = 500, a = 0} }})
+	
+	table.insert(t, {id = "notes-graph", loop = 1000, op = {2152}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = 1060, h = 266 + skin_config.offset["Notes Graph Offset"].h, a = 0}, {time = 1000, a = 200} }})
+	table.insert(t, {id = "notes-graph", loop = 1000, op = {80, -2152, -2155, -2151}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = 1060, h = 266 + skin_config.offset["Notes Graph Offset"].h, a = 0}, {time = 1000, a = 200} }})
+	table.insert(t, {id = "judgegraph-1", loop = 1000, op = {81, 2153}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = 1060, h = 266 + skin_config.offset["Notes Graph Offset"].h, a = 0}, {time = 1000, a = 200} }})
+	table.insert(t, {id = "judgegraph-2", loop = 1000, op = {81, 2154}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = 1060, h = 266 + skin_config.offset["Notes Graph Offset"].h, a = 0}, {time = 1000, a = 200} }})
+	table.insert(t, {id = "timingvisualizer", loop = 1000, op = {2155}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = 1060, h = 266 + skin_config.offset["Notes Graph Offset"].h, a = 0}, {time = 1000, a = 200} }})
+	table.insert(t, {id = "bpmgraph", loop = 1000, op = {177, -2155, -2151}, dst = { {time = 500, x = property.constants.bga_x + video_x, y = property.constants.bga_y, w = 1060, h = 266 + skin_config.offset["Notes Graph Offset"].h, a = 0}, {time = 1000, a = 200} }})
+	
+	local playinfo_x = property.constants.bga_x + video_x + 15 + skin_config.offset["Play Information Offset"].x
+	local playinfo_y = property.constants.bga_y + 15 + skin_config.offset["Play Information Offset"].y
 	if property.is2pLane() then
-		playinfo_x = property.constants.bga_x + video_x + 808
+		playinfo_x = property.constants.bga_x + video_x + 808 + skin_config.offset["Play Information Offset"].x
+	end
+	if skin_config.option["Toggle Webcam Frame"] == 2282 then
+		playinfo_y = playinfo_y + 276
 	end
 	table.insert(t, {id = "play_information", loop = 1000, stretch = 1, op = {2142}, dst = { {time = 500, x = playinfo_x, y = playinfo_y, w = 237, h = 206, a = 0}, {time = 1000, a = 255} }})
 	table.insert(t, {id = "perfect-count", loop = 1000, stretch = 1, op = {2142}, dst = { {time = 500, x = playinfo_x + 143, y = playinfo_y + 167, w = 20, h = 28, a = 0}, {time = 1000, a = 255} }})

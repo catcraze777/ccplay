@@ -143,14 +143,14 @@ function LaneType.destination()
 		}}
 	}
 	if property.is1pLane() then
-		table.insert(t, {id = "key-cover-p1", loop = 1000, dst = { 
+		table.insert(t, {id = "key-cover-p1", op = {2171}, loop = 1000, dst = { 
 			{time = 500, a = 0, x = property.constants.lane_x_location + 338, y = 1080, w = 99, h = 837},
 			{time = 750, a = 128, x = property.constants.lane_x_location + 338, y = property.constants.lane_y_location + 200 - 112, w = 99, h = 837},
 			{time = 875, a = 192, x = property.constants.lane_x_location + 338, y = property.constants.lane_y_location + 50 - 112, w = 99, h = 837},
 			{time = 1000, a = 255, x = property.constants.lane_x_location + 338, y = property.constants.lane_y_location - 112, w = 99, h = 837}
 		}})
 	else
-		table.insert(t, {id = "key-cover-p2", loop = 1000, dst = { 
+		table.insert(t, {id = "key-cover-p2", op = {2171}, loop = 1000, dst = { 
 			{time = 500, a = 0, x = property.constants.lane_x_location, y = 1080, w = 99, h = 837},
 			{time = 750, a = 128, x = property.constants.lane_x_location, y = property.constants.lane_y_location + 200 - 112, w = 99, h = 837},
 			{time = 875, a = 192, x = property.constants.lane_x_location, y = property.constants.lane_y_location + 50 - 112, w = 99, h = 837},
