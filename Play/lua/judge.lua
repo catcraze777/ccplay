@@ -21,12 +21,12 @@ function Judge.image()
 		{id = "judgef-bd", src = source_id, x = 0, y = 112 * 6, w = 255 * 2, h = 112, divx = 2, cycle = 66},
 		{id = "judgef-pr", src = source_id, x = 0, y = 112 * 7, w = 255 * 2, h = 112, divx = 2, cycle = 66},
 		{id = "judgef-ms", src = source_id, x = 0, y = 112 * 7, w = 255 * 2, h = 112, divx = 2, cycle = 66},
-		{id = "judge-fast", src = "src-common", x = 0, y = 514, w = 85, h = 25},
-		{id = "judge-slow", src = "src-common", x = 85, y = 514, w = 85, h = 25},
+		{id = "judge-fast", src = "src-common", x = 0, y = 515, w = 85, h = 25},
+		{id = "judge-slow", src = "src-common", x = 85, y = 515, w = 85, h = 25},
 		{id = "autoplay", src = "src-common", x = 0, y = 544, w = 144, h = 25},
 		{id = "loading", src = "src-common", x = 136, y = 579, w = 122, h = 25},
-		{id = "ready", src = "src-common", x = 136, y = 604, w = 122, h = 25},
-		{id = "finish", src = "src-common", x = 136, y = 629, w = 244, h = 50}
+		{id = "ready", src = "src-common", x = 136, y = 605, w = 122, h = 25},
+		{id = "finish", src = "src-common", x = 136, y = 635, w = 244, h = 50}
 	}
 	return t
 end

@@ -15,9 +15,9 @@ function Graph.image()
 	table.insert(t, {id = "graph_aaa_hit", src = "src-common", x = 0, y = 188 + 29 * 3, w = 298, h = 29})
 	table.insert(t, {id = "graph_aa_hit", src = "src-common", x = 0, y = 188 + 29 * 4, w = 298, h = 29})
 	table.insert(t, {id = "graph_a_hit", src = "src-common", x = 0, y = 188 + 29 * 5, w = 298, h = 29})
-	table.insert(t, {id = "graph_flash", src = "src-common", x = 0, y = 586, w = 33, h = 33})
-	table.insert(t, {id = "graph_score_target_text", src = "src-common", x = 136, y = 679, w = 114, h = 25})
-	table.insert(t, {id = "graph_score_best_text", src = "src-common", x = 136, y = 704, w = 114, h = 25})
+	table.insert(t, {id = "graph_flash", src = "src-common", x = 0, y = 585, w = 33, h = 33})
+	table.insert(t, {id = "graph_score_target_text", src = "src-common", x = 136, y = 690, w = 114, h = 25})
+	table.insert(t, {id = "graph_score_best_text", src = "src-common", x = 136, y = 716, w = 114, h = 25})
 	return t
 end
 function Graph.value()
