@@ -123,6 +123,12 @@ table.insert(property.property, {
 		{name = "Timing Visualizer", op = 2155}
 	}
 })
+table.insert(property.property, {
+	name = "Full Combo Confetti", category = "Full Combo Confetti", item = {
+		{name = "Off", op = 2181},
+		{name = "On", op = 2182}
+	}
+})
 
 property.filepath = {}
 table.insert(property.filepath, {name = "Sudden Cover", category = "Sudden Cover", path = "custom/sudden/*.png", def = "Default"})
@@ -166,7 +172,8 @@ property.category = {
 		"Custom Frame",
 		"Custom Frame File",
 		"Frame RGB (0-255)",
-		"Stipes RGB (0-255)"
+		"Stipes RGB (0-255)",
+		"Full Combo Confetti"
 	}},
 	{name = "Play Options", item = {
 		"Toggle Graph",

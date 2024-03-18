@@ -26,7 +26,8 @@ function Judge.image()
 		{id = "autoplay", src = "src-common", x = 0, y = 544, w = 144, h = 25},
 		{id = "loading", src = "src-common", x = 136, y = 579, w = 122, h = 25},
 		{id = "ready", src = "src-common", x = 136, y = 605, w = 122, h = 25},
-		{id = "finish", src = "src-common", x = 136, y = 635, w = 244, h = 50}
+		{id = "finish", src = "src-common", x = 136, y = 635, w = 244, h = 50},
+		{id = "full-combo", src = "src-common", x = 136, y = 748, w = 244, h = 103}
 	}
 	return t
 end
@@ -162,7 +163,7 @@ function Judge.destination()
 					{time = 1000, a = 0, x = start_x + 366/2, y = start_y - 5, w = 0, h = 0},
 					{time = 1500, a = 0}
 				}})
-	table.insert(t, {id = "finish", loop = 1500, op = {81}, timer = 143, offsets = {3,32}, dst = {
+	table.insert(t, {id = "finish", loop = 1500, op = {81, 2244, -2245}, timer = 143, offsets = {3,32}, dst = {
 					{time = 0, x = property.constants.lane_x_location + property.constants.lane_width_ac/2 - 244/2, y = start_y, w = 244, h = 0, a = 0},
 					{time = 125, a = 128, y = start_y, h = 12},
 					{time = 250, a = 255, y = start_y, h = 50},
@@ -172,6 +173,65 @@ function Judge.destination()
 					{time = 1000, a = 255, y = start_y, h = 50},
 					{time = 1500, a = 0}
 				}})	
+	table.insert(t, {id = "finish", loop = 1500, op = {81, -2244, 2245}, timer = 143, offsets = {3,32}, dst = {
+					{time = 0, x = property.constants.lane_x_location + property.constants.lane_width_ac/2 - 244/2, y = start_y, w = 244, h = 0, a = 0},
+					{time = 125, a = 128, y = start_y, h = 12},
+					{time = 250, a = 255, y = start_y, h = 50},
+					{time = 437, a = 255, y = start_y + 15, h = 50},
+					{time = 625, a = 255, y = start_y + 20, h = 50},
+					{time = 812, a = 255, y = start_y + 15, h = 50},
+					{time = 1000, a = 255, y = start_y, h = 50},
+					{time = 1500, a = 0}
+				}})	
+	table.insert(t, {id = "finish", loop = 1500, op = {81, 2244, 2245}, timer = 143, offsets = {3,32}, dst = {
+					{time = 0, x = property.constants.lane_x_location + property.constants.lane_width_ac/2 - 244/2, y = start_y, w = 244, h = 0, a = 0},
+					{time = 125, a = 128, y = start_y, h = 12},
+					{time = 250, a = 255, y = start_y, h = 50},
+					{time = 437, a = 255, y = start_y + 15, h = 50},
+					{time = 625, a = 255, y = start_y + 20, h = 50},
+					{time = 812, a = 255, y = start_y + 15, h = 50},
+					{time = 1000, a = 255, y = start_y, h = 50},
+					{time = 1500, a = 0}
+				}})	
+	table.insert(t, {id = "full-combo", loop = 1500, op = {81, -2244, -2245}, timer = 143, offsets = {3,32}, dst = {
+					{time = 0, x = property.constants.lane_x_location + property.constants.lane_width_ac/2 - 244/2, y = start_y - 25, w = 244, h = 0, a = 0},
+					{time = 125, a = 128, y = start_y - 25, h = 12 * 2},
+					{time = 250, a = 255, y = start_y - 25, h = 50 * 2},
+					{time = 437, a = 255, y = start_y - 25 + 15, h = 50 * 2},
+					{time = 625, a = 255, y = start_y - 25 + 20, h = 50 * 2},
+					{time = 812, a = 255, y = start_y - 25 + 15, h = 50 * 2},
+					{time = 1000, a = 255, y = start_y - 25, h = 50 * 2},
+					{time = 1500, a = 0}
+				}})	
+				
+	-- Confetti!!!
+	if skin_config.option["Full Combo Confetti"] == 2182 then
+		for confetti_count = 0, 500 do
+			i = 90 * confetti_count / 500
+			random_scale = math.random(500, 900)
+			random_scale_2 = math.random(500, 900)
+			height_over_distance = 2
+			-- left side
+			dst_table = {}
+			delay = math.random(0,300)
+			table.insert(dst_table, {time = delay, x = 0, y = 0, w = 20, h = 20, r = math.random(50,255), g = math.random(50,255), b = math.random(50,255)})
+			for j = 1, 20 do
+				k = j / 20
+				table.insert(dst_table, {time = 50 * j + delay, x = (j / 10) * math.cos(i) * random_scale, y = height_over_distance * 4 * (k)*(k - 1) * math.sin(i) * random_scale - 20, w = 10, h = 10})
+			end
+			table.insert(t, {id = -111, loop = 50 * 20 + delay, op = {81, -2244, -2245}, timer = 143, dst = dst_table})
+			-- right side
+			dst_table = {}
+			delay = math.random(0,300)
+			table.insert(dst_table, {time = delay, x = 1920, y = 0, w = 20, h = 20, r = math.random(50,255), g = math.random(50,255), b = math.random(50,255)})
+			for j = 1, 20 do
+				k = j / 20
+				table.insert(dst_table, {time = 50 * j + delay, x = 1920 - (j / 10) * math.cos(i) * random_scale_2, y = height_over_distance * 4 * (k)*(k - 1) * math.sin(i) * random_scale_2 - 20, w = 10, h = 10})
+			end
+			table.insert(t, {id = -111, loop = 50 * 20 + delay, op = {81, -2244, -2245}, timer = 143, dst = dst_table})
+		end
+	end
+	
 	local type_b_offset = 275
 	local direction = 1
 	if property.is2pLane() then
