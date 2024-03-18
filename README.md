@@ -30,5 +30,6 @@ The following uses an image overlay over the optional flat frame to achieve a mo
 Due to personal difficulties with finding documentation on beatoraja lua skins, LITONE was heavily referenced to help with understanding the structure of lua skins. While as much of the skin was created from scratch as possible, it's inevitable some code and asset similarities will be noticed, so I feel it's important to credit the skin I've referenced during development. Be sure to support LITONE and DESOUT 2 here! https://desout2.tk/
 
 # Download
-You can download the latest version via "Releases" or by downloading the source code.
-https://github.com/catcraze777/ccplay/releases/tag/releases
+You can download the latest version via "Releases" or by downloading from the main branch.
+The releases are considered complete and tested however the main branch might have new, smaller featuers and is the most up to date.
+https://github.com/catcraze777/ccplay/releases
