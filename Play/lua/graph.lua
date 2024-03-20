@@ -194,11 +194,11 @@ function Graph.destination()
 			{time = 250 + 1900, a = 255},
 		}})
 		-- Personal best does not exist.
-	table.insert(t, {id = "graph_score_target_text", loop = 2150, op = {2012, 2031}, draw = function() return (main_state.number(150) == 0) and skin_config.option["Graph Personal Best Only"] == 2031 end, dst = { 
+	table.insert(t, {id = "graph_score_target_text", loop = 1950, op = {2012, 2031}, draw = function() return (main_state.number(150) == 0) and skin_config.option["Graph Personal Best Only"] == 2031 end, dst = { 
 			{time = 0 + 1700, x = graph_x + 75, y = graph_y + 5, w = 114, h = 25, a = 0},
 			{time = 250 + 1700, a = 255},
 		}})
-	table.insert(t, {id = "graph_score_target_value", loop = 2150, op = {2012, 2031}, draw = function() return (main_state.number(150) == 0) and skin_config.option["Graph Personal Best Only"] == 2031 end, dst = { 
+	table.insert(t, {id = "graph_score_target_value", loop = 1950, op = {2012, 2031}, draw = function() return (main_state.number(150) == 0) and skin_config.option["Graph Personal Best Only"] == 2031 end, dst = { 
 			{time = 0 + 1700, x = graph_x + 75 + 120, y = graph_y - 1 + 5, w = 20, h = 28, a = 0},
 			{time = 250 + 1700, a = 255},
 		}})
