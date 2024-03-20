@@ -9,7 +9,7 @@ local main_state = require("main_state")
 local utils = require("utils")
 local Object = require("object")
 local Objects = require("objects")
-local property = require("property")
+local property = require("property_dp")
 
 local main = {}
 
@@ -17,7 +17,7 @@ function main.skin(skintype, playstyle)
 	
 	local header = {
 		type = skintype,
-		name = "CC-Play Vers 1.3",
+		name = "CC-Play Vers 1.3 DP",
 		w = 1920,
 		h = 1080,
 		loadend = 3500,
@@ -32,7 +32,7 @@ function main.skin(skintype, playstyle)
 		category = property.category
 	}
 	
-	if skintype == consts.SKINTYPE_5KEYS then
+	if skintype == consts.SKINTYPE_10KEYS then
 		table.insert(header.property, {
 		name = "Enable Key Cover", category = "Enable Key Cover", item = {
 			{name = "On", op = 2171},
@@ -41,7 +41,7 @@ function main.skin(skintype, playstyle)
 	end
 
 	local function body()
-		property = require("lua/property_funcs")
+		property = require("lua_dp/property_funcs")
 		
 		local skin = {}
 		for k, v in pairs(header) do
@@ -77,28 +77,21 @@ function main.skin(skintype, playstyle)
 		table.insert(skin.source, {id = "src-graph", path = "custom/graph/*.png"})
 		table.insert(skin.source, {id = "src-failed", path = "img/common/lane_frame/failed.png"})
 		
-		if property.is1pLane() and property.shadedFrame() then
-			table.insert(skin.source, {id = "src-laneframe", path = "img/common/lane_frame/laneframe_custom_p1.png"})
-			table.insert(skin.source, {id = "src-laneframe-base", path = "img/common/lane_frame/laneframe_custom_p1_base.png"})
-			table.insert(skin.source, {id = "src-laneframe-stripes", path = "img/common/lane_frame/laneframe_custom_p1_stripes.png"})
-		elseif property.is1pLane() then
-			table.insert(skin.source, {id = "src-laneframe", path = "img/common/lane_frame/laneframe_custom_p1.png"})
-			table.insert(skin.source, {id = "src-laneframe-base", path = "img/common/lane_frame/laneframe_custom_p1_base_noshade.png"})
-			table.insert(skin.source, {id = "src-laneframe-stripes", path = "img/common/lane_frame/laneframe_custom_p1_stripes_noshade.png"})
-		elseif property.is2pLane() and property.shadedFrame() then
-			table.insert(skin.source, {id = "src-laneframe", path = "img/common/lane_frame/laneframe_custom_p2.png"})
-			table.insert(skin.source, {id = "src-laneframe-base", path = "img/common/lane_frame/laneframe_custom_p2_base.png"})
-			table.insert(skin.source, {id = "src-laneframe-stripes", path = "img/common/lane_frame/laneframe_custom_p2_stripes.png"})
-		elseif property.is2pLane() then
-			table.insert(skin.source, {id = "src-laneframe", path = "img/common/lane_frame/laneframe_custom_p2.png"})
-			table.insert(skin.source, {id = "src-laneframe-base", path = "img/common/lane_frame/laneframe_custom_p2_base_noshade.png"})
-			table.insert(skin.source, {id = "src-laneframe-stripes", path = "img/common/lane_frame/laneframe_custom_p2_stripes_noshade.png"})
+		if property.shadedFrame() then
+			table.insert(skin.source, {id = "src-laneframe", path = "img/common/lane_frame_dp/laneframe_custom.png"})
+			table.insert(skin.source, {id = "src-laneframe-base", path = "img/common/lane_frame_dp/laneframe_custom_base.png"})
+			table.insert(skin.source, {id = "src-laneframe-stripes", path = "img/common/lane_frame_dp/laneframe_custom_stripes.png"})
+		else
+			table.insert(skin.source, {id = "src-laneframe", path = "img/common/lane_frame_dp/laneframe_custom.png"})
+			table.insert(skin.source, {id = "src-laneframe-base", path = "img/common/lane_frame_dp/laneframe_custom_base_noshade.png"})
+			table.insert(skin.source, {id = "src-laneframe-stripes", path = "img/common/lane_frame_dp/laneframe_custom_stripes_noshade.png"})
 		end
 		if property.customFrame() then
 			table.insert(skin.source, {id = "src-laneframe-overlay", path = "custom/frame/*.png"})
 		else
 			table.insert(skin.source, {id = "src-laneframe-overlay", path = "img/common/lane_frame/default_custom.png"})
 		end
+		table.insert(skin.source, {id = "src-laneframe-mult", path = "img/common/lane_frame_dp/laneframe_custom_base_noshade.png"})
 		
 		skin.image = {}
 		
@@ -174,25 +167,25 @@ function main.skin(skintype, playstyle)
 
 		skin.destination = {}
 		
-		if skintype == consts.SKINTYPE_7KEYS then
-			Lane = require "lua/lane"
-			Notes = require "lua/notes"
-			Covers = require "lua/covers"
-			Bomb = require "lua/bomb"
+		if skintype == consts.SKINTYPE_14KEYS then
+			Lane = require "lua_dp/lane"
+			Notes = require "lua_dp/notes"
+			Covers = require "lua_dp/covers"
+			Bomb = require "lua_dp/bomb"
 		else
-			Lane = require "lua/lane_5k"
-			Notes = require "lua/notes_5k"
-			Covers = require "lua/covers_5k"
-			Bomb = require "lua/bomb_5k"
+			Lane = require "lua_dp/lane_5k"
+			Notes = require "lua_dp/notes_5k"
+			Covers = require "lua_dp/covers_5k"
+			Bomb = require "lua_dp/bomb_5k"
 		end
 		
-		LaneFrame = require "lua/laneframe"
-		Gauge = require "lua/gauge"
-		Difficulty = require "lua/difficulty"
-		Judge = require "lua/judge"
-		BGAFrame = require "lua/bgaframe_parts"
-		Failed = require "lua/failed"
-		Graph = require "lua/graph"
+		LaneFrame = require "lua_dp/laneframe"
+		Gauge = require "lua_dp/gauge"
+		Difficulty = require "lua_dp/difficulty"
+		Judge = require "lua_dp/judge"
+		BGAFrame = require "lua_dp/bgaframe_parts"
+		Failed = require "lua_dp/failed"
+		Graph = require "lua_dp/graph"
 		
 		local lane = Lane.new()
 		local notes = Notes.new()
@@ -206,7 +199,10 @@ function main.skin(skintype, playstyle)
 		local failed = Failed.new()
 		local graph = Graph.new()
 		
-		local parts = Objects.new({graph, frame, bgaframe, lane, notes, gauge, diff, covers, bomb, judge, failed})
+		local parts = Objects.new({--graph, frame, bgaframe, 
+			graph, frame, lane, notes, gauge, diff, covers, bomb, judge, bgaframe, failed
+--			gauge, diff, covers, bomb, judge, failed
+		})
 		
 		utils.mergeArray(skin.image, parts:image())
 		utils.mergeArray(skin.imageset, parts:imageset())

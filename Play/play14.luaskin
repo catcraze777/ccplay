@@ -1,0 +1,9 @@
+local consts = require("consts")
+
+local main = require("play_dp")
+local skin = main.skin(consts.SKINTYPE_14KEYS, consts.PLAYSTYLE_DP)
+if skin_config then
+	return skin.body()
+else
+	return skin.header
+end
