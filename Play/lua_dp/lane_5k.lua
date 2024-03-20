@@ -122,7 +122,7 @@ function LaneType.destination()
 	} } )
 	table.insert(t, {
 		id = "progressbar-lamp", blend = 2, loop = 500, dst = {
-			{time = 0, x = 1453, y = 990, w = 50, h = 68, acc = 2, a = 0, r = skin_config.offset["Frame RGB (0-255)"].x, g = skin_config.offset["Frame RGB (0-255)"].y, b = skin_config.offset["Frame RGB (0-255)"].w},
+			{time = 0, x = 1453 - 2, y = 990, w = 50, h = 68, acc = 2, a = 0, r = skin_config.offset["Frame RGB (0-255)"].x, g = skin_config.offset["Frame RGB (0-255)"].y, b = skin_config.offset["Frame RGB (0-255)"].w},
 			{time = 250, y = 990 + 125, a = 128},
 			{time = 375, y = 990 + 31, a = 192},
 			{time = 500, y = 990}
