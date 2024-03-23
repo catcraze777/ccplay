@@ -75,7 +75,7 @@ function WebcamParts.destination()
 		for i = 1, 50 do
 			i_2 = i - 1
 			local condition = function() 
-				rng_seed = rng_seed + 0.4
+				rng_seed = rng_seed + 0.4 * 120.0 / main_state.number(20)
 				math.randomseed( math.floor(rng_seed) )
 				gauge_i = math.floor(main_state.gauge() / 2)
 				within_three = gauge_i - 3 <= i and i <= gauge_i - 1
