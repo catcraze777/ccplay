@@ -17,7 +17,7 @@ function main.skin(skintype, playstyle)
 	
 	local header = {
 		type = skintype,
-		name = "CC-Play Vers 1.3 DP",
+		name = "CC-Play Vers 1.4 DP",
 		w = 1920,
 		h = 1080,
 		loadend = 3500,
@@ -186,6 +186,8 @@ function main.skin(skintype, playstyle)
 		BGAFrame = require "lua_dp/bgaframe_parts"
 		Failed = require "lua_dp/failed"
 		Graph = require "lua_dp/graph"
+		WebcamParts = require "lua_dp/webcam_parts"
+		GaugeVertical = require "lua_dp/gauge_vert"
 		
 		local lane = Lane.new()
 		local notes = Notes.new()
@@ -198,9 +200,11 @@ function main.skin(skintype, playstyle)
 		local bgaframe = BGAFrame.new()
 		local failed = Failed.new()
 		local graph = Graph.new()
+		local webcam = WebcamParts.new()
+		local vertGauge = GaugeVertical.new()
 		
 		local parts = Objects.new({--graph, frame, bgaframe, 
-			graph, frame, lane, notes, gauge, diff, covers, bomb, judge, bgaframe, failed
+			graph, frame, lane, notes, gauge, diff, covers, bomb, vertGauge, judge, bgaframe, webcam, failed
 --			gauge, diff, covers, bomb, judge, failed
 		})
 		

@@ -123,6 +123,18 @@ table.insert(property.property, {
 		{name = "On", op = 2182}
 	}
 })
+table.insert(property.property, {
+	name = "Vertical Groove Gauge", category = "Vertical Groove Gauge", item = {
+		{name = "Off", op = 2191},
+		{name = "On", op = 2192}
+	}
+})
+table.insert(property.property, {
+	name = "Webcam Frame", category = "Toggle Webcam Frame", item = {
+		{name = "Off", op = 2201},
+		{name = "On", op = 2202}
+	}
+})
 
 property.filepath = {}
 table.insert(property.filepath, {name = "Sudden Cover", category = "Sudden Cover", path = "custom/sudden/*.png", def = "Default"})
@@ -153,7 +165,6 @@ table.insert(property.offset, {
 
 property.category = {
 	{name = "Frame Options", item = {
-		"Lane Position",
 		"Toggle Frame Stripes",
 		"Toggle Frame Details",
 		"Frame Visuals",
@@ -176,6 +187,7 @@ property.category = {
 		"Graph Background",
 		"Groove Gauge",
 		"Groove Num",
+		"Vertical Groove Gauge",
 		"Custom Sudden Cover",
 		"Sudden Cover",
 		"Custom Lift Cover",

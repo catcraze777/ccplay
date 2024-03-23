@@ -27,5 +27,8 @@ end
 function property.customFrame()
 	return skin_config.option["Custom Frame"] == 2102
 end
+function property.verticalGrooveGauge()
+	return skin_config.option["Vertical Groove Gauge"] == 2192
+end
 
 return property

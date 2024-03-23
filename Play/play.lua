@@ -17,7 +17,7 @@ function main.skin(skintype, playstyle)
 	
 	local header = {
 		type = skintype,
-		name = "CC-Play Vers 1.3",
+		name = "CC-Play Vers 1.4",
 		w = 1920,
 		h = 1080,
 		loadend = 3500,
