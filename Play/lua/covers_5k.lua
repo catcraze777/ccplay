@@ -157,6 +157,30 @@ function LaneType.destination()
 			{time = 1000, a = 255, x = property.constants.lane_x_location, y = property.constants.lane_y_location - 112, w = 99, h = 837}
 		}})
 	end
+	table.insert(t, {id = "notes-graph", loop = 1500, op = {2192}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}})
+	table.insert(t, {id = "notes-graph", loop = 1500, op = {80, -2192, -2195, -2191}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}})
+	table.insert(t, {id = "judgegraph-1", loop = 1500, op = {81, 2193}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}})
+	table.insert(t, {id = "judgegraph-2", loop = 1500, op = {81, 2194}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}})
+	table.insert(t, {id = "timingvisualizer", loop = 1500, op = {2195}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}})
+	table.insert(t, {id = "bpmgraph", loop = 1500, op = {177, -2195, -2191}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}})
 	return t
 end
 

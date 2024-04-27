@@ -44,7 +44,7 @@ function LaneType.destination()
 		lift_g = 255
 		lift_b = 255
 	end
-  return {
+  t = {
 		{id = "lift", loop = 1000, dst = { 
 			{time = 500, a = 0, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = property.constants.lane_y_location - 100 + property.constants.lane_outline_width - property.constants.lane_height_ac, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = property.constants.lane_height_ac, r = lift_r, g = lift_g, b = lift_b},
 			{time = 750, a = 128, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = property.constants.lane_y_location - 25 + property.constants.lane_outline_width - property.constants.lane_height_ac, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = property.constants.lane_height_ac},
@@ -59,6 +59,30 @@ function LaneType.destination()
 			{time = 500, a = 0, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080 + 100, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = property.constants.lane_height_ac, r = sudden_r, g = sudden_g, b = sudden_b},
 			{time = 750, a = 128, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080 + 25, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = property.constants.lane_height_ac},
 			{time = 1000, a = 255, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = property.constants.lane_height_ac}
+		}},
+		{id = "notes-graph", loop = 1500, op = {2192}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "notes-graph", loop = 1500, op = {80, -2192, -2195, -2191}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "judgegraph-1", loop = 1500, op = {81, 2193}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "judgegraph-2", loop = 1500, op = {81, 2194}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "timingvisualizer", loop = 1500, op = {2195}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "bpmgraph", loop = 1500, op = {177, -2195, -2191}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
 		}},
 		{id = "green-num-min-int", loop = 1000, op = {270, -271, -273, 177}, offset = 4, dst = {
 			{time = 0, a = 0, x = property.constants.lane_x_location + property.constants.lane_outline_width + 193 - 4, y = 1080 - 7 - 18 - 20 + 9, w = 6, h = 9, r = 0, b = 0},
@@ -136,6 +160,7 @@ function LaneType.destination()
 			{time = 1000, a = 255}
 		}}
 	}
+	return t
 end
 
 local Covers = Objects.new({LaneType})

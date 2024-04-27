@@ -136,6 +136,16 @@ table.insert(property.property, {
 	}
 })
 
+table.insert(property.property, {
+	name = "Sudden+ Notes Graph", category = "Sudden+ Notes Graph", item = {
+		{name = "Off", op = 2211},
+		{name = "Note Display", op = 2212},
+		{name = "Judge Display", op = 2213},
+		{name = "Fast/Slow Display", op = 2214},
+		{name = "Timing Visualizer", op = 2215}
+	}
+})
+
 property.filepath = {}
 table.insert(property.filepath, {name = "Sudden Cover", category = "Sudden Cover", path = "custom/sudden/*.png", def = "Default"})
 table.insert(property.filepath, {name = "Lift Cover", category = "Lift Cover", path = "custom/lift/*.png", def = "Default"})
@@ -161,6 +171,9 @@ table.insert(property.offset, {
 })
 table.insert(property.offset, {
 	name = "Play Information Offset", category = "Play Information Offset", id = 52, x = 0, y = 0
+})
+table.insert(property.offset, {
+	name = "Sudden+ Notes Graph Offset", category = "Sudden+ Notes Graph Offset", id = 53, h = 0
 })
 
 property.category = {
@@ -199,7 +212,9 @@ property.category = {
 		"Play Information",
 		"Play Information Offset",
 		"Notes Graph",
-		"Notes Graph Offset"
+		"Notes Graph Offset",
+		"Sudden+ Notes Graph",
+		"Sudden+ Notes Graph Offset"
 	}},
 }
 

@@ -63,6 +63,31 @@ function LaneType.destination()
 			{time = 750, a = 128, x = property.constants.lane_x_location_p1 + property.constants.lane_outline_width, y = 1080 + 25, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = property.constants.lane_height_ac},
 			{time = 1000, a = 255, x = property.constants.lane_x_location_p1 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = property.constants.lane_height_ac}
 		}},
+		{id = "notes-graph", loop = 1500, op = {2212}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location_p1 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "notes-graph", loop = 1500, op = {80, -2212, -2215, -2211}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location_p1 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "judgegraph-1", loop = 1500, op = {81, 2213}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location_p1 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "judgegraph-2", loop = 1500, op = {81, 2214}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location_p1 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "timingvisualizer", loop = 1500, op = {2215}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location_p1 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "bpmgraph", loop = 1500, op = {177, -2215, -2211}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location_p1 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		
 		{id = "green-num-min-int", loop = 1000, op = {270, -271, -273, 177}, offset = 4, dst = {
 			{time = 0, a = 0, x = property.constants.lane_x_location_p1 + property.constants.lane_outline_width + 193 - 4, y = 1080 - 7 - 18 - 20 + 9, w = 6, h = 9, r = 0, b = 0},
 			{time = 1000, a = 0},
@@ -155,6 +180,30 @@ function LaneType.destination()
 			{time = 500, a = 0, x = property.constants.lane_x_location_p2 + property.constants.lane_outline_width, y = 1080 + 100, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = property.constants.lane_height_ac, r = sudden_r, g = sudden_g, b = sudden_b},
 			{time = 750, a = 128, x = property.constants.lane_x_location_p2 + property.constants.lane_outline_width, y = 1080 + 25, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = property.constants.lane_height_ac},
 			{time = 1000, a = 255, x = property.constants.lane_x_location_p2 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = property.constants.lane_height_ac}
+		}},
+		{id = "notes-graph", loop = 1500, op = {2212}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location_p2 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "notes-graph", loop = 1500, op = {80, -2212, -2215, -2211}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location_p2 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "judgegraph-1", loop = 1500, op = {81, 2213}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location_p2 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "judgegraph-2", loop = 1500, op = {81, 2214}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location_p2 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "timingvisualizer", loop = 1500, op = {2215}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location_p2 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
+		}},
+		{id = "bpmgraph", loop = 1500, op = {177, -2215, -2211}, offset = 4, dst = { 
+			{time = 1000, x = property.constants.lane_x_location_p2 + property.constants.lane_outline_width, y = 1080, w = property.constants.lane_width_ac - 2 * property.constants.lane_outline_width, h = 100 + skin_config.offset["Sudden+ Notes Graph Offset"].h, a = 0}, 
+			{time = 1500, a = 200} 
 		}},
 		{id = "green-num-min-int", loop = 1000, op = {270, -271, -273, 177}, offset = 4, dst = {
 			{time = 0, a = 0, x = property.constants.lane_x_location_p2 + property.constants.lane_outline_width + 193 - 4, y = 1080 - 7 - 18 - 20 + 9, w = 6, h = 9, r = 0, b = 0},
